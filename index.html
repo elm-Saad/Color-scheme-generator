@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Generator</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <script defer src="app.js" type="module"></script>
+</head>
+<body>
+    <main>
+        <nav>
+            <input type="color" id="colorInput" value="#F55A5A">
+            <form action="#">
+                <div class="custom-select">
+                    <select name="colors" id="col">
+                            <option value="Monochrome">Monochrome</option>
+                            <option value="Monochrome-dark">Monochrome-dark</option>
+                            <option value="Monochrome-light">Monochrome-light</option>
+                            <option value="Analogic">Analogic</option>
+                            <option value="Complement">Complement</option>
+                            <option value="Analogic-complement">Analogic-complement</option>
+                            <option value="Triad">Triad</option>
+                    </select>
+                </div>
+            </form>
+            <button id="get-scheme">Get color scheme</button>
+        </nav>
+        <section class="display-color-data" id="display-color-data">
+        </section>
+    </main>
+</body>
+</html>
