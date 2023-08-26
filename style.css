@@ -1,0 +1,143 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #1C1C1C;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    width: 550px;
+    background-color: #FFF;
+    margin: 3rem auto;
+}
+nav{
+    width: 100%;
+    margin: 0 auto;
+    height: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+input[type='color']{
+    width: 50px;
+    height: 35px;
+    border: 1px solid #313131;
+    cursor: pointer;
+}
+.custom-select {
+    position: relative;
+    width: 315px;
+}
+.custom-select select {
+    display: none; 
+}
+.select-copy{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    padding: 0.625rem 0.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid  #D1D5DB;
+    background: #FFF;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    color: #111827;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    outline: 0;
+    cursor: pointer;
+    user-select: none;
+}
+.select-copy:after {
+    position: absolute;
+    content: "";
+    top: 0.625rem;
+    right: 0.625rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url('erow.svg');
+}
+.select-option{
+    position: absolute;
+    background-color: #FFF;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 4px 0px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05),
+                0px 4px 6px -2px rgba(0, 0, 0, 0.05),
+                0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+}
+.select-option div{
+    color: #111827;
+    position: relative;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.select-option {
+    position: absolute;
+    background-color: #FFF;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.select-close {
+    display: none;
+}
+
+.select-option div:hover,.selected{
+    font-weight: 600;
+    margin-left: 5px;
+}
+.selected::after {
+    position: absolute;
+    content: "";
+    top: 0.625rem;
+    right: 0.625rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url('chech.svg');
+}
+button{
+    padding: 1rem 0.5rem;
+    background-color: #FFF;
+    color: #374151;
+    border-radius: 4px;
+    border: 1px solid #D1D5DB;
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.display-color-data{
+    display: grid;
+    grid-template:460px/110px 110px 110px 110px 110px;
+}
+.color{
+    display: block;
+    height:410px;
+}
+.hex-code{
+    display: block;
+    height: 50px;
+    color: #2B283A;
+    background-color: white;
+    font-size:0.75rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
